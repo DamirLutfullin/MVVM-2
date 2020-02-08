@@ -22,6 +22,7 @@
 		19D842B723ED91FB004048E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D842B623ED91FB004048E2 /* DetailViewController.swift */; };
 		19D842B923ED9287004048E2 /* DetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D842B823ED9287004048E2 /* DetailViewViewModel.swift */; };
 		19D842BB23EDC1A8004048E2 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D842BA23EDC1A8004048E2 /* DetailViewModelType.swift */; };
+		19F98F5123EF0BDE002B3C42 /* Boxing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F98F5023EF0BDE002B3C42 /* Boxing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		19D842B623ED91FB004048E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		19D842B823ED9287004048E2 /* DetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewViewModel.swift; sourceTree = "<group>"; };
 		19D842BA23EDC1A8004048E2 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		19F98F5023EF0BDE002B3C42 /* Boxing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boxing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,8 @@
 				19AA1F3023EC2D8600AA998A /* ViewModel */,
 				19AA1F2D23EC1C2B00AA998A /* View */,
 				19AA1F2C23EC1C1B00AA998A /* Model */,
-				1954311823E9922E00003890 /* AppDelegate.swift */,
-				1954311A23E9922E00003890 /* SceneDelegate.swift */,
-				1954312123E9923000003890 /* Assets.xcassets */,
-				1954312623E9923000003890 /* Info.plist */,
+				19C8CED723EEFEED009B88EA /* Supporting files */,
+				19F98F5023EF0BDE002B3C42 /* Boxing.swift */,
 			);
 			path = "MVVM-2";
 			sourceTree = "<group>";
@@ -124,6 +124,17 @@
 				19D842BA23EDC1A8004048E2 /* DetailViewModelType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		19C8CED723EEFEED009B88EA /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				1954311823E9922E00003890 /* AppDelegate.swift */,
+				1954311A23E9922E00003890 /* SceneDelegate.swift */,
+				1954312123E9923000003890 /* Assets.xcassets */,
+				1954312623E9923000003890 /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				19D842BB23EDC1A8004048E2 /* DetailViewModelType.swift in Sources */,
 				19D842B923ED9287004048E2 /* DetailViewViewModel.swift in Sources */,
 				19AA1F3323EC2DF800AA998A /* TableViewModelType.swift in Sources */,
+				19F98F5123EF0BDE002B3C42 /* Boxing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = "MVVM-2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM-2/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQU76263MV;
-				INFOPLIST_FILE = "MVVM-2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MVVM-2/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

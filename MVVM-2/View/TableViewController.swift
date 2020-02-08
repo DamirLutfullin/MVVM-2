@@ -14,9 +14,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = TableViewModel()
-        
     }
     
     // MARK: - Table view data source
@@ -25,6 +23,7 @@ class TableViewController: UITableViewController {
         return viewModel?.numberOfRows ?? 0
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
@@ -32,5 +31,19 @@ class TableViewController: UITableViewController {
         cell?.viewModel =  viewModel?.cellViewModel(from: indexPath)
         
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        viewModel.seletedRowAtIndexPath(from: indexPath)
+        
+        performSegue(withIdentifier: "segue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue" {
+            guard let dvc = segue.destination as? DetailViewController else { return }
+            dvc.viewModel = viewModel?.viewModelForSelectedRow()
+        }
     }
 }
