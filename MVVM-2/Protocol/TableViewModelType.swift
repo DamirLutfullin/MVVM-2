@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TableViewViewModelType: class {
+protocol TableViewViewModelType: AnyObject {
     var numberOfRows: Int { get }
     func cellViewModel(from indextPath: IndexPath) -> TableViewCellViewModelType?
     

@@ -19,5 +19,4 @@ class TableViewCell: UITableViewCell {
             age.text = newValue?.age
         }
     }
-
 }

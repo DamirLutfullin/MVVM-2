@@ -32,7 +32,6 @@ class DetailViewController: UIViewController {
     }
     
     func delay( delay: Double, clousure: @escaping () -> ()) {
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             clousure()
         }
